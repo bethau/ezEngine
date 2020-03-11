@@ -31,7 +31,7 @@ void ezGameEngineTestParticles::SetupSubTests()
   AddSubTest("SizeCurveBehavior", SubTests::SizeCurveBehavior);
   AddSubTest("TrailRenderer", SubTests::TrailRenderer);
   AddSubTest("VelocityBehavior", SubTests::VelocityBehavior);
-  AddSubTest("EffectRenderer", SubTests::EffectRenderer);
+  //AddSubTest("EffectRenderer", SubTests::EffectRenderer);
 }
 
 ezResult ezGameEngineTestParticles::InitializeSubTest(ezInt32 iIdentifier)

@@ -9,7 +9,7 @@ class ezGameEngineTestApplication_Particles : public ezGameEngineTestApplication
 public:
   ezGameEngineTestApplication_Particles();
 
-  void SubTestBillboardsSetup();
+  void SetupSceneSubTest(const char* szFile);
   void SetupParticleSubTest(const char* szFile);
   ezTestAppRun ExecParticleSubTest(ezInt32 iCurFrame);
 };
@@ -23,7 +23,6 @@ public:
 private:
   enum SubTests
   {
-    Billboards,
     BillboardRenderer,
     ColorGradientBehavior,
     FliesBehavior,
@@ -42,6 +41,9 @@ private:
     RandomSizeInitializer,
     RotationSpeedInitializer,
     VelocityConeInitializer,
+
+    Billboards,
+    PullAlongBehavior,
   };
 
   virtual void SetupSubTests() override;

@@ -20,7 +20,6 @@ ezGameEngineTestApplication* ezGameEngineTestParticles::CreateApplication()
 
 void ezGameEngineTestParticles::SetupSubTests()
 {
-  AddSubTest("Billboards", SubTests::Billboards);
   AddSubTest("BillboardRenderer", SubTests::BillboardRenderer);
   AddSubTest("ColorGradientBehavior", SubTests::ColorGradientBehavior);
   AddSubTest("FliesBehavior", SubTests::FliesBehavior);
@@ -39,6 +38,9 @@ void ezGameEngineTestParticles::SetupSubTests()
   AddSubTest("RandomSizeInitializer", SubTests::RandomSizeInitializer);
   AddSubTest("RotationSpeedInitializer", SubTests::RotationSpeedInitializer);
   AddSubTest("VelocityConeInitializer", SubTests::VelocityConeInitializer);
+
+  AddSubTest("Billboards", SubTests::Billboards);
+  //AddSubTest("PullAlongBehavior", SubTests::PullAlongBehavior);
 }
 
 ezResult ezGameEngineTestParticles::InitializeSubTest(ezInt32 iIdentifier)
@@ -47,13 +49,17 @@ ezResult ezGameEngineTestParticles::InitializeSubTest(ezInt32 iIdentifier)
 
   if (iIdentifier == SubTests::Billboards)
   {
-    m_pOwnApplication->SubTestBillboardsSetup();
+    m_pOwnApplication->SetupSceneSubTest("Particles/AssetCache/Common/Billboards.ezObjectGraph");
+    return EZ_SUCCESS;
+  }
+  else if (iIdentifier == SubTests::PullAlongBehavior)
+  {
+    m_pOwnApplication->SetupSceneSubTest("Particles/AssetCache/Common/Particles2.ezObjectGraph");
     return EZ_SUCCESS;
   }
   else
   {
     const char* szEffects[] = {
-      "",
       "{ 08b3e790-2832-4083-93ec-133a93054c4c }", // BillboardRenderer
       "{ f0959d22-6004-47e7-b167-af707d4d5cea }", // ColorGradientBehavior
       "{ cb01c6d9-b8ff-4347-ab8b-e94403c68aad }", // FliesBehavior
@@ -97,9 +103,9 @@ ezGameEngineTestApplication_Particles::ezGameEngineTestApplication_Particles()
 
 //////////////////////////////////////////////////////////////////////////
 
-void ezGameEngineTestApplication_Particles::SubTestBillboardsSetup()
+void ezGameEngineTestApplication_Particles::SetupSceneSubTest(const char* szFile)
 {
-  LoadScene("Particles/AssetCache/Common/Billboards.ezObjectGraph");
+  LoadScene(szFile);
 }
 
 void ezGameEngineTestApplication_Particles::SetupParticleSubTest(const char* szFile)

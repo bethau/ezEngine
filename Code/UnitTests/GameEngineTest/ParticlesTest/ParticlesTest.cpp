@@ -35,6 +35,10 @@ void ezGameEngineTestParticles::SetupSubTests()
   AddSubTest("BoxPosInitializer", SubTests::BoxPositionInitializer);
   AddSubTest("SpherePosInitializer", SubTests::SpherePositionInitializer);
   AddSubTest("CylinderPosInitializer", SubTests::CylinderPositionInitializer);
+  AddSubTest("RandomColorInitializer", SubTests::RandomColorInitializer);
+  AddSubTest("RandomSizeInitializer", SubTests::RandomSizeInitializer);
+  AddSubTest("RotationSpeedInitializer", SubTests::RotationSpeedInitializer);
+  AddSubTest("VelocityConeInitializer", SubTests::VelocityConeInitializer);
 }
 
 ezResult ezGameEngineTestParticles::InitializeSubTest(ezInt32 iIdentifier)
@@ -64,6 +68,10 @@ ezResult ezGameEngineTestParticles::InitializeSubTest(ezInt32 iIdentifier)
       "{ e30bbbf2-9bda-45e0-8116-1ae8b998ce61 }", // BoxPositionInitializer
       "{ 536e7516-d811-4552-a3e9-5153dfdd5be1 }", // SpherePositionInitializer
       "{ 2fb51ce6-69fc-44ad-b453-2822e091916f }", // CylinderPositionInitializer
+      "{ 8cfee0af-ac0e-452d-b13f-e67420497397 }", // RandomColorInitializer
+      "{ b4a3fc51-60ac-48b2-abec-5b2b6728676c }", // RandomSizeInitializer
+      "{ f51d9d7b-0ad9-4f61-acb4-745c2b91a311 }", // RotationSpeedInitializer
+      "{ c5a48c20-efab-4af5-a86b-91cd2241682e }", // VelocityConeInitializer
     };
 
     m_pOwnApplication->SetupParticleSubTest(szEffects[iIdentifier]);

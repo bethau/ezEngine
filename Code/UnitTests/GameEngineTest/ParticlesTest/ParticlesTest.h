@@ -38,6 +38,10 @@ private:
     BoxPositionInitializer,
     SpherePositionInitializer,
     CylinderPositionInitializer,
+    RandomColorInitializer,
+    RandomSizeInitializer,
+    RotationSpeedInitializer,
+    VelocityConeInitializer,
   };
 
   virtual void SetupSubTests() override;

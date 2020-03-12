@@ -11,9 +11,12 @@
 { 8cfee0af-ac0e-452d-b13f-e67420497397 };Common/RandomColorInit.ezParticleEffect
 { 8f2115d8-88e4-4858-b357-3148fec8cc05 };Common/Billboards.ezObjectGraph
 { ProjectDecalAtlas };PC/Decals.ezTextureAtlas
+{ b4a3fc51-60ac-48b2-abec-5b2b6728676c };Common/RandomSizeInit.ezParticleEffect
 { ba82b712-3af7-430d-91a6-492aa836dffb };Common/Velocity.ezParticleEffect
+{ c5a48c20-efab-4af5-a86b-91cd2241682e };Common/VelocityConeInit.ezParticleEffect
 { cb01c6d9-b8ff-4347-ab8b-e94403c68aad };Common/Flies.ezParticleEffect
 { e30bbbf2-9bda-45e0-8116-1ae8b998ce61 };Common/BoxPositionInit.ezParticleEffect
 { ec64cef4-4936-4e44-8d47-9fedda2cc75b };Common/Gravity.ezParticleEffect
 { ec85e634-b8ee-475f-bd86-7cbc2973de0a };Common/TrailRenderer.ezParticleEffect
 { f0959d22-6004-47e7-b167-af707d4d5cea };Common/ColorGradient.ezParticleEffect
+{ f51d9d7b-0ad9-4f61-acb4-745c2b91a311 };Common/RotationSpeedInit.ezParticleEffect
